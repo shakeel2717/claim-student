@@ -30,6 +30,7 @@ Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     Route::resource('complain', ComplaintController::class);
 });
 
+Route::redirect('/', '/dashboard/index');
 Route::redirect('/admin', '/admin/dashboard/index');
 Route::prefix('/admin')->group(function () {
     Route::get('/login', [adminAuth::class, 'login'])->name('adminlogin');
@@ -40,4 +41,5 @@ Route::prefix('admin/dashboard')->middleware(['admin'])->group(function () {
     Route::get('/index', [adminDashboard::class, 'index'])->name('adminDashboard');
     Route::get('/all-complains', [adminDashboard::class, 'complainIndex'])->name('complainIndex');
     Route::resource('student', StudentController::class);
+    Route::get('/complaintUpdate/{complain}/{status?}', [adminDashboard::class, 'complaintUpdate'])->name('complaintUpdate');
 });

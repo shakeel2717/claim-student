@@ -84,15 +84,9 @@
                         </li>
 
                         <li>
-                            <a href="{{ route('student.create') }}">
-                                <i class="fas fa-chart-bar"></i>Register Student</a>
-                        </li>
-
-                        <li>
                             <a href="{{ route('complainIndex') }}">
                                 <i class="fas fa-chart-bar"></i>All Complains</a>
                         </li>
-
                     </ul>
                 </nav>
             </div>
@@ -119,7 +113,7 @@
                             <div class="col-md-12">
                                 <div class="overview-wrap">
                                     <h2 class="title-1">overview</h2>
-                                    <a href="{{ route('complain.create') }}" class="au-btn au-btn-icon au-btn--blue">
+                                    <a href="" class="au-btn au-btn-icon au-btn--blue">
                                         <i class="zmdi zmdi-plus"></i>New Complain</a>
                                 </div>
                             </div>

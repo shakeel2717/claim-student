@@ -12,7 +12,7 @@ class adminDashboard extends Controller
     {
         $totalComplain = complaint::get();
         $totalStudent = student::get();
-        return view('admin.dashboard.index',[
+        return view('admin.dashboard.index', [
             'totalComplain' => $totalComplain,
             'totalStudent' => $totalStudent,
         ]);
@@ -20,9 +20,18 @@ class adminDashboard extends Controller
 
     public function complainIndex()
     {
-        $totalComplain = complaint::where('email',session('user')[0]->email)->get();
-        return view('dashboard.complain.index',[
+        $totalComplain = complaint::where('email', session('user')[0]->email)->get();
+        return view('admin.dashboard.complain.index', [
             'totalComplain' => $totalComplain,
         ]);
+    }
+
+
+    public function complaintUpdate($complaint,$status)
+    {
+        $task = complaint::findOrFail($complaint);
+        $task->status = strtoupper($status);
+        $task->save();
+        return redirect()->back()->with('message', 'Status Changed Successfully');
     }
 }

@@ -79,7 +79,7 @@ class ComplaintController extends Controller
      */
     public function update(Request $request, complaint $complaint)
     {
-        //
+        return 1;
     }
 
     /**
