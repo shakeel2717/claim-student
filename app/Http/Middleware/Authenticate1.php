@@ -3,8 +3,9 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use DB;
 
-class Authenticate
+class Authenticate1
 {
     /**
      * Get the path the user should be redirected to when they are not authenticated.
@@ -14,8 +15,8 @@ class Authenticate
      */
     public function handle($request, Closure $next)
     {
-        if (!$request->session()->exists('user')) {
-            return redirect()->route('login');
+        if (!$request->session()->exists('admin')) {
+            return redirect(route('adminlogin'));
         }
         return $next($request);
     }

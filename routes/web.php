@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\adminAuth;
+use App\Http\Controllers\adminDashboard;
 use App\Http\Controllers\auth;
+use App\Http\Controllers\ComplaintController;
 use App\Http\Controllers\dashboard;
 use Illuminate\Support\Facades\Route;
 
@@ -15,11 +18,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/register',[auth::class,'register'])->name('register');
-Route::post('/register',[auth::class,'regsiterReq'])->name('regsiterReq');
+Route::get('/register', [auth::class, 'register'])->name('register');
+Route::post('/register', [auth::class, 'regsiterReq'])->name('regsiterReq');
 
-Route::get('/login',[auth::class,'login'])->name('login');
-Route::post('/login',[auth::class,'loginReq'])->name('loginReq');
+Route::get('/login', [auth::class, 'login'])->name('login');
+Route::post('/login', [auth::class, 'loginReq'])->name('loginReq');
 
-Route::get('/dashboard',[dashboard::class,'index'])->name('dashboard');
+Route::prefix('dashboard')->middleware(['auth'])->group(function () {
+    Route::get('/index', [dashboard::class, 'index'])->name('dashboard');
+    Route::resource('complain', ComplaintController::class);
+});
 
+Route::redirect('/admin', '/admin/dashboard/index');
+Route::prefix('/admin')->group(function () {
+    Route::get('/login', [adminAuth::class, 'login'])->name('adminlogin');
+    Route::post('/login', [adminAuth::class, 'loginReq'])->name('adminloginReq');
+});
+
+Route::prefix('admin/dashboard')->middleware(['admin'])->group(function () {
+    Route::get('/index', [adminDashboard::class, 'index'])->name('adminDashboard');
+});

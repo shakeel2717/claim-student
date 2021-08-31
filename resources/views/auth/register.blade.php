@@ -45,8 +45,8 @@
         </form>
         <div class="register-link">
             <p>
-                Don't you have account?
-                <a href="#">Sign Up Here</a>
+                Already Registered?
+                <a href="{{route('login')}}">Sign In Here</a>
             </p>
         </div>
     </div>

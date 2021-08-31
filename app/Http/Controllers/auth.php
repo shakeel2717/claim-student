@@ -42,10 +42,8 @@ class auth extends Controller
         if ($request->input('password') != $query[0]->password) {
             return "Invalid Password";
         }
-        // sending this user to dashboard
-
         // storing session
-        session(['user',$query]);
+        session(['user' => $query]);
         return redirect()->route('dashboard');
     }
 }
