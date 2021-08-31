@@ -84,6 +84,11 @@
                         </li>
 
                         <li>
+                            <a href="{{ route('student.create') }}">
+                                <i class="fas fa-chart-bar"></i>Register Student</a>
+                        </li>
+
+                        <li>
                             <a href="{{ route('complainIndex') }}">
                                 <i class="fas fa-chart-bar"></i>All Complains</a>
                         </li>

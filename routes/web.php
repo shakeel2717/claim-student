@@ -5,6 +5,7 @@ use App\Http\Controllers\adminDashboard;
 use App\Http\Controllers\auth;
 use App\Http\Controllers\ComplaintController;
 use App\Http\Controllers\dashboard;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,5 +39,5 @@ Route::prefix('/admin')->group(function () {
 Route::prefix('admin/dashboard')->middleware(['admin'])->group(function () {
     Route::get('/index', [adminDashboard::class, 'index'])->name('adminDashboard');
     Route::get('/all-complains', [adminDashboard::class, 'complainIndex'])->name('complainIndex');
-    
+    Route::resource('student', StudentController::class);
 });
