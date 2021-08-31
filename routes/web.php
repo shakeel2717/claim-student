@@ -37,4 +37,6 @@ Route::prefix('/admin')->group(function () {
 
 Route::prefix('admin/dashboard')->middleware(['admin'])->group(function () {
     Route::get('/index', [adminDashboard::class, 'index'])->name('adminDashboard');
+    Route::get('/all-complains', [adminDashboard::class, 'complainIndex'])->name('complainIndex');
+    
 });

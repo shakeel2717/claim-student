@@ -79,17 +79,15 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li>
-                            <a href="{{ route('dashboard') }}">
+                            <a href="{{ route('adminDashboard') }}">
                                 <i class="fas fa-chart-bar"></i>Dashboard</a>
                         </li>
+
                         <li>
-                            <a href="{{ route('complain.create') }}">
-                                <i class="fas fa-chart-bar"></i>New Complain</a>
+                            <a href="{{ route('complainIndex') }}">
+                                <i class="fas fa-chart-bar"></i>All Complains</a>
                         </li>
-                        <li>
-                            <a href="{{ route('complain.index') }}">
-                                <i class="fas fa-chart-bar"></i>My Complain</a>
-                        </li>
+
                     </ul>
                 </nav>
             </div>
