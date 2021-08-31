@@ -48,6 +48,7 @@
                                 <img src="{{ asset('assets/images/icon/logo.png') }}" alt="CoolAdmin">
                             </a>
                         </div>
+                        <x-alert />
                         @yield('form')
                     </div>
                 </div>
