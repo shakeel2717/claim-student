@@ -43,3 +43,6 @@ Route::prefix('admin/dashboard')->middleware(['admin'])->group(function () {
     Route::resource('student', StudentController::class);
     Route::get('/complaintUpdate/{complain}/{status?}', [adminDashboard::class, 'complaintUpdate'])->name('complaintUpdate');
 });
+
+// Logout from System
+Route::get('/logout', [auth::class, 'logout'])->name('logout');

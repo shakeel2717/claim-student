@@ -58,4 +58,11 @@ class auth extends Controller
         session(['user' => $query]);
         return redirect()->route('dashboard');
     }
+    
+    // Logout
+    public function logout(Request $request)
+    {
+        $request->session()->flush();
+        return redirect(route('login'));
+    }
 }
