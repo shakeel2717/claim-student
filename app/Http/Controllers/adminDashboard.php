@@ -20,7 +20,7 @@ class adminDashboard extends Controller
 
     public function complainIndex()
     {
-        $totalComplain = complaint::where('email', session('user')[0]->email)->get();
+        $totalComplain = complaint::get();
         return view('admin.dashboard.complain.index', [
             'totalComplain' => $totalComplain,
         ]);
