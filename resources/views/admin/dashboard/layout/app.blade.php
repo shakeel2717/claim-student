@@ -59,8 +59,23 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li>
-                            <a href="{{ route('dashboard') }}">
+                            <a href="{{ route('adminDashboard') }}">
                                 <i class="fas fa-chart-bar"></i>Dashboard</a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route('student.create') }}">
+                                <i class="fas fa-chart-bar"></i>Register Student</a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route('complainIndex') }}">
+                                <i class="fas fa-chart-bar"></i>All Complains</a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route('logout') }}">
+                                <i class="fas fa-chart-bar"></i>Logout</a>
                         </li>
                     </ul>
                 </div>

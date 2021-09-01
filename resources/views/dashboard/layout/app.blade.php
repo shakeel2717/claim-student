@@ -62,6 +62,18 @@
                             <a href="{{ route('dashboard') }}">
                                 <i class="fas fa-chart-bar"></i>Dashboard</a>
                         </li>
+                        <li>
+                            <a href="{{ route('complain.create') }}">
+                                <i class="fas fa-chart-bar"></i>New Complain</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('complain.index') }}">
+                                <i class="fas fa-chart-bar"></i>My Complain</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('logout') }}">
+                                <i class="fas fa-chart-bar"></i>Logout</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
