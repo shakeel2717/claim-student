@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class student extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'fname',
+        'lname',
+        'email',
+        'father',
+        'mobile',
+        'address',
+        'calss',
+        'password',
+    ];
+
+    public function complaint()
+    {
+        return $this->hasOne(complaint::class);
+    }
 }

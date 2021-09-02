@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\complaint;
+use App\Models\user;
 use Illuminate\Http\Request;
 
 class ComplaintController extends Controller
@@ -14,8 +15,8 @@ class ComplaintController extends Controller
      */
     public function index()
     {
-        $totalComplain = complaint::where('email',session('user')[0]->email)->get();
-        return view('dashboard.complain.index',[
+        $totalComplain = user::find(session('user')[0]->id)->complaint;
+        return view('dashboard.complain.index', [
             'totalComplain' => $totalComplain,
         ]);
     }
@@ -39,7 +40,7 @@ class ComplaintController extends Controller
     public function store(Request $request)
     {
         $task = new complaint();
-        $task->email = session('user')[0]->email;
+        $task->user_id = session('user')[0]->id;
         $task->subject = $request->input('subject');
         $task->staff = $request->input('staff');
         $task->value = $request->input('message');

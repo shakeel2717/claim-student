@@ -20,10 +20,10 @@
                         <tbody>
                             @forelse ($totalComplain as $complain)
                                 <tr>
-                                    <td>{{$complain->subject}}</td>
-                                    <td>{{$complain->staff}}</td>
-                                    <td>{{$complain->value}}</td>
-                                    <td>{{$complain->created_at}}</td>
+                                    <td>{{ $complain->subject }}</td>
+                                    <td>{{ $complain->staff }}</td>
+                                    <td>{{ $complain->value }}</td>
+                                    <td>{{ $complain->created_at }}</td>
                                 </tr>
                             @empty
                                 <h2 class="text-center">Sorry, no Complain Found</h2>
