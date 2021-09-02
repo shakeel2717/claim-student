@@ -15,20 +15,30 @@
                                 <div class="form-group">
                                     <label for="subject">Subject</label>
                                     <select class="form-control" name="subject" id="subject">
-                                        <option value="University">University</option>
-                                        <option value="Garden">Garden</option>
-                                        <option value="Enviroment">Enviroment</option>
-                                        <option value="Students">Students</option>
-                                        <option value="Class">Class</option>
+                                        <option value="Teachers">Teachers</option>
+                                        <option value="Bus">Bus</option>
+                                        <option value="Lab ">Lab </option>
+                                        <option value="Room">Room</option>
+                                        <option value="Student">Student</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="Staff">Complain Against</label>
                                     <select class="form-control" name="staff" id="subject">
-                                        <option value="Teacher">Teacher</option>
-                                        <option value="Principle">Principle</option>
-                                        <option value="Student">Student</option>
-                                        <option value="Fees">Fees</option>
+                                        <option value="The Instructor is not prepared for Each class ">The Instructor is not
+                                            prepared for Each class </option>
+                                        <option
+                                            value="The instructor not communicates with the subject matter effectively ">The
+                                            instructor not communicates with the subject matter effectively </option>
+                                        <option
+                                            value="The instructor doesn't shows respect towards students and encourages class participation ">
+                                            The instructor doesn't shows respect towards students and encourages class
+                                            participation </option>
+                                        <option value="The instructor doesn't leave the class on time">The instructor
+                                            doesn't leave the class on time</option>
+                                        <option value="The instructor doesn't arrives in the class on time">The instructor
+                                            doesn't arrives in the class on time</option>
+                                        <option value="Others">Others</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
