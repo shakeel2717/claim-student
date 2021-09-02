@@ -13,4 +13,11 @@ class complaint extends Model
     {
         return $this->hasMany(user::class);
     }
+
+    public function complaintReply()
+    {
+        return $this->hasMany(complaintReply::class);
+    }
+
+
 }

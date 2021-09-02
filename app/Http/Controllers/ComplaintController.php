@@ -21,6 +21,16 @@ class ComplaintController extends Controller
         ]);
     }
 
+
+    public function complainReply($complaint)
+    {
+        // getting this Compalnt reply from database
+        $query = complaint::find($complaint)->complaintReply;
+        return view('dashboard.complain.viewReply', [
+            'viewReply' => $query,
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -28,6 +28,7 @@ Route::post('/login', [auth::class, 'loginReq'])->name('loginReq');
 Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     Route::get('/index', [dashboard::class, 'index'])->name('dashboard');
     Route::resource('complain', ComplaintController::class);
+    Route::get('complainReply/{complain}', [ComplaintController::class, 'complainReply'])->name('complainReply');
 });
 
 Route::redirect('/', '/dashboard/index');

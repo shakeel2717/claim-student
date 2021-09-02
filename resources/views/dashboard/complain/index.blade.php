@@ -24,7 +24,11 @@
                                     <td>{{ $complain->subject }}</td>
                                     <td>{{ $complain->staff }}</td>
                                     <td>{{ $complain->value }}</td>
-                                    <td>{{ $complain->status }}</td>
+                                    <td>{{ $complain->status }}
+                                        @if ($complain->status == 'Reply')
+                                            <a href="{{ route('complainReply',['complain' => $complain->id]) }}" class="btn btn-primary">View Reply</a>
+                                        @endif
+                                    </td>
                                     <td>{{ $complain->created_at }}</td>
                                 </tr>
                             @empty
