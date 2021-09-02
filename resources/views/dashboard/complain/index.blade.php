@@ -14,6 +14,7 @@
                                 <th>Subject</th>
                                 <th>Staff</th>
                                 <th>Complain</th>
+                                <th>Status</th>
                                 <th>Date</th>
                             </tr>
                         </thead>
@@ -23,6 +24,7 @@
                                     <td>{{ $complain->subject }}</td>
                                     <td>{{ $complain->staff }}</td>
                                     <td>{{ $complain->value }}</td>
+                                    <td>{{ $complain->status }}</td>
                                     <td>{{ $complain->created_at }}</td>
                                 </tr>
                             @empty

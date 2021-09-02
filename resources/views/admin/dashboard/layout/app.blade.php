@@ -69,6 +69,11 @@
                         </li>
 
                         <li>
+                            <a href="{{ route('student.index') }}">
+                                <i class="fas fa-chart-bar"></i>All Students</a>
+                        </li>
+
+                        <li>
                             <a href="{{ route('complainIndex') }}">
                                 <i class="fas fa-chart-bar"></i>All Complains</a>
                         </li>
@@ -101,6 +106,17 @@
                         <li>
                             <a href="{{ route('student.create') }}">
                                 <i class="fas fa-chart-bar"></i>Register Student</a>
+                        </li>
+
+
+                        <li>
+                            <a href="{{ route('student.index') }}">
+                                <i class="fas fa-chart-bar"></i>All Students</a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route('student.register') }}">
+                                <i class="fas fa-chart-bar"></i>All Registed Students</a>
                         </li>
 
                         <li>
@@ -143,6 +159,7 @@
                                 </div>
                             </div>
                         </div>
+                        <x-alert />
                         @yield('content')
 
                         <div class="row">

@@ -16,7 +16,10 @@
                                 <th>Complain</th>
                                 <th>Status</th>
                                 <th>Date</th>
-                                <th>Action</th>
+                                <th>Close</th>
+                                <th>Reject</th>
+                                <th>Complete</th>
+                                <th>Reply</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,10 +32,15 @@
                                     <td>{{ $complain->created_at }}</td>
                                     <td><a class="btn btn-success"
                                             href="{{ route('complaintUpdate', ['complain' => $complain->id, 'status' => 'Close']) }}">Close</a>
-                                        <a class="btn btn-danger"
+                                    </td>
+                                    <td><a class="btn btn-danger"
                                             href="{{ route('complaintUpdate', ['complain' => $complain->id, 'status' => 'Reject']) }}">Reject</a>
-                                        <a class="btn btn-primary"
+                                    </td>
+                                    <td><a class="btn btn-primary"
                                             href="{{ route('complaintUpdate', ['complain' => $complain->id, 'status' => 'Complete']) }}">Complete</a>
+                                    </td>
+                                    <td><a class="btn btn-primary"
+                                            href="{{ route('complaintReply', ['complain' => $complain->id]) }}">Reply</a>
                                     </td>
                                 </tr>
                             @empty

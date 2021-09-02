@@ -41,7 +41,12 @@ Route::prefix('admin/dashboard')->middleware(['admin'])->group(function () {
     Route::get('/index', [adminDashboard::class, 'index'])->name('adminDashboard');
     Route::get('/all-complains', [adminDashboard::class, 'complainIndex'])->name('complainIndex');
     Route::resource('student', StudentController::class);
+    Route::get('studentRegister', [StudentController::class, 'studentRegister'])->name('student.register');
+    
     Route::get('/complaintUpdate/{complain}/{status?}', [adminDashboard::class, 'complaintUpdate'])->name('complaintUpdate');
+    Route::get('/complaintReply/{complain}', [adminDashboard::class, 'complaintReply'])->name('complaintReply');
+    Route::post('/complaintReply', [adminDashboard::class, 'complaintReplyReq'])->name('complaintReplyReq');
+    
 });
 
 // Logout from System

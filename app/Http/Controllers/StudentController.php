@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\student;
+use App\Models\user;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -14,7 +15,16 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.dashboard.student.index',[
+            'totalStudents' => student::get(),
+        ]);
+    }
+
+    public function studentRegister()
+    {
+        return view('admin.dashboard.student.register',[
+            'totalStudents' => user::get(),
+        ]);
     }
 
     /**
