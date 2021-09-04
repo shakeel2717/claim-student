@@ -1,7 +1,7 @@
 @extends('admin.dashboard.layout.app')
 @section('content')
     <div class="row m-t-25">
-        <div class="col-sm-6 col-lg-3">
+        <div class="col-3 col-sm-12 col-md-6 col-lg-6">
             <div class="overview-item overview-item--c1 p-3">
                 <div class="overview__inner">
                     <div class="overview-box clearfix">
@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="row m-t-25">
-        <div class="col-sm-6 col-lg-3">
+        <div class="col-3 col-sm-12 col-md-6 col-lg-6">
             <div class="overview-item overview-item--c1 p-3">
                 <div class="overview__inner">
                     <div class="overview-box clearfix">
@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-lg-3">
+        <div class="col-3 col-sm-12 col-md-6 col-lg-6">
             <div class="overview-item overview-item--c1 p-3">
                 <div class="overview__inner">
                     <div class="overview-box clearfix">
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-lg-3">
+        <div class="col-3 col-sm-12 col-md-6 col-lg-6">
             <div class="overview-item overview-item--c1 p-3">
                 <div class="overview__inner">
                     <div class="overview-box clearfix">
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-lg-3">
+        <div class="col-3 col-sm-12 col-md-6 col-lg-6">
             <div class="overview-item overview-item--c1 p-3">
                 <div class="overview__inner">
                     <div class="overview-box clearfix">

@@ -15,16 +15,13 @@
                                 <div class="form-group">
                                     <label for="subject">Subject</label>
                                     <select class="form-control" name="subject" id="subject">
-                                        <option value="Teachers">Teachers</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Lab ">Lab </option>
-                                        <option value="Room">Room</option>
-                                        <option value="Student">Student</option>
+                                        <option value="PRINCIPAL">PRINCIPAL</option>
+                                        <option value="HOD">HOD</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="Staff">Complain Against</label>
-                                    <select class="form-control" name="staff" id="subject">
+                                    {{-- <select class="form-control" name="staff" id="subject">
                                         <option value="The Instructor is not prepared for Each class ">The Instructor is not
                                             prepared for Each class </option>
                                         <option
@@ -39,6 +36,14 @@
                                         <option value="The instructor doesn't arrives in the class on time">The instructor
                                             doesn't arrives in the class on time</option>
                                         <option value="Others">Others</option>
+                                    </select> --}}
+                                    <select class="form-control" name="subject" id="subject">
+                                        <option value="Teachers">Teachers</option>
+                                        <option value="Bus">Bus</option>
+                                        <option value="Lab ">Lab </option>
+                                        <option value="Room">Room</option>
+                                        <option value="Student">Student</option>
+                                        <option value="Other">Other</option>
                                     </select>
                                 </div>
                                 <div class="form-group">

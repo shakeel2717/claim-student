@@ -37,15 +37,15 @@
 
 </head>
 
-<body class="animsition">
+<body>
     <div class="page-wrapper">
-        <div class="page-content--bge5">
+        <div class="">
             <div class="container">
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="{{ asset('assets/images/icon/logo.png') }}" alt="CoolAdmin">
+                                <h2>GPGC KHAR COLLEGE</h2>
                             </a>
                         </div>
                         <x-alert />

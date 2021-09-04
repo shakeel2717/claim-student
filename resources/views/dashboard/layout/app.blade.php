@@ -45,7 +45,7 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                            <h2>GPGC KHAR COLLEGE</h2>
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -84,7 +84,7 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="{{ asset('assets/images/icon/logo.png') }}" alt="Cool Admin" />
+                    <h2>GPGC KHAR COLLEGE</h2>
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
