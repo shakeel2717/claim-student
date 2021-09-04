@@ -20,7 +20,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Staff">Complain Against</label>
+                                    <label for="staff">Complain Against</label>
                                     {{-- <select class="form-control" name="staff" id="subject">
                                         <option value="The Instructor is not prepared for Each class ">The Instructor is not
                                             prepared for Each class </option>
@@ -37,7 +37,7 @@
                                             doesn't arrives in the class on time</option>
                                         <option value="Others">Others</option>
                                     </select> --}}
-                                    <select class="form-control" name="Staff" id="Staff">
+                                    <select class="form-control" name="staff" id="staff">
                                         <option value="Teachers">Teachers</option>
                                         <option value="Bus">Bus</option>
                                         <option value="Lab ">Lab </option>
