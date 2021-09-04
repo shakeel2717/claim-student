@@ -137,6 +137,7 @@
                                 </div>
                             </div>
                         </div>
+                        <x-alert />
                         @yield('content')
 
                         <div class="row">

@@ -56,7 +56,7 @@ class ComplaintController extends Controller
         $task->value = $request->input('message');
         $task->status = "Pending";
         $task->save();
-        return "Success";
+        return redirect()->back()->with('message', 'Sucess');
     }
 
     /**

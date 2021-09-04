@@ -48,11 +48,11 @@ class auth extends Controller
         // checking if user email is exist in database
         $query = user::where('email', $request->input('email'))->get();
         if (count($query) < 1) {
-            return "No User Found";
+            return redirect()->back()->with('message', 'No User Found');
         }
         // checking if user password is Correct
         if ($request->input('password') != $query[0]->password) {
-            return "Invalid Password";
+            return redirect()->back()->with('message', 'Invalid Password');
         }
         // storing session
         session(['user' => $query]);

@@ -18,11 +18,11 @@ class adminAuth extends Controller
         // checking if user email is exist in database
         $query = admin::where('username', $request->input('username'))->get();
         if (count($query) < 1) {
-            return "No Admin Found";
+            return redirect()->back()->with('message', 'No Admin Found');
         }
         // checking if user password is Correct
         if ($request->input('password') != $query[0]->password) {
-            return "Invalid Admin Password";
+            return redirect()->back()->with('message', 'Invalid Admin Password');
         }
         // storing session
         session(['admin' => $query]);

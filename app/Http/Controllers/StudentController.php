@@ -53,7 +53,7 @@ class StudentController extends Controller
         $task->dob = $request->input('dob');
         $task->address = $request->input('address');
         $task->save();
-        return "New Student Registered!";
+        return redirect()->back()->with('message', 'New Student Registered!');
     }
 
     /**
