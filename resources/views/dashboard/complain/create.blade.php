@@ -37,7 +37,7 @@
                                             doesn't arrives in the class on time</option>
                                         <option value="Others">Others</option>
                                     </select> --}}
-                                    <select class="form-control" name="subject" id="subject">
+                                    <select class="form-control" name="Staff" id="Staff">
                                         <option value="Teachers">Teachers</option>
                                         <option value="Bus">Bus</option>
                                         <option value="Lab ">Lab </option>
